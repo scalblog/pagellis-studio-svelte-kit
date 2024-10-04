@@ -27,9 +27,9 @@
     <a href="/" class="text-2xl font-bold text-gray-800">Pagellis Studio</a>
     
     <nav class="hidden md:flex space-x-6">
-      <a href="/" class="text-gray-600 hover:text-gray-800">Accueil</a>
+      <a href="/" class="text-gray-600 hover:text-gray-800">Home</a>
       <a href="/services" class="text-gray-600 hover:text-gray-800">Services</a>
-      <a href="/a-propos" class="text-gray-600 hover:text-gray-800">À propos</a>
+      <a href="/a-propos" class="text-gray-600 hover:text-gray-800">About</a>
       <a href="/contact" class="text-gray-600 hover:text-gray-800">Contact</a>
     </nav>
 
@@ -43,9 +43,9 @@
   {#if isMenuOpen}
     <div class="md:hidden bg-white">
       <nav class="container mx-auto px-4 py-4 flex flex-col space-y-4">
-        <a href="/" class="text-gray-600 hover:text-gray-800">Accueil</a>
+        <a href="/" class="text-gray-600 hover:text-gray-800">Home</a>
         <a href="/services" class="text-gray-600 hover:text-gray-800">Services</a>
-        <a href="/a-propos" class="text-gray-600 hover:text-gray-800">À propos</a>
+        <a href="/a-propos" class="text-gray-600 hover:text-gray-800">About</a>
         <a href="/contact" class="text-gray-600 hover:text-gray-800">Contact</a>
       </nav>
     </div>

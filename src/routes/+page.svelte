@@ -1,13 +1,12 @@
 <script>
   import { onMount } from 'svelte';
+  import FAQs from "$lib/components/FAQs.svelte";
+  import Reviews from "$lib/components/Reviews.svelte";
 
   let clientLogos = [
-    { name: 'Client 1', logo: '/images/client1.png' },
-    { name: 'Client 2', logo: '/images/client2.png' },
-    { name: 'Client 3', logo: '/images/client3.png' },
-    { name: 'Client 4', logo: '/images/client4.png' },
-    { name: 'Client 5', logo: '/images/client5.png' },
-    { name: 'Client 6', logo: '/images/client6.png' },
+    { name: 'iGraal' },
+    { name: 'SeLoger' },
+    { name: 'Agence Fidesio' },
   ];
 
   let features = [
@@ -112,6 +111,26 @@
       <h2 class="text-3xl font-bold mb-6">The unseen of spending three years at Pixelgrade</h2>
       <p class="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       <button class="px-6 py-3 bg-green-500 text-white rounded-md hover:bg-green-600">Learn More</button>
+    </div>
+  </div>
+</section>
+
+<section class="pricing py-16">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">What our clients say</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <Reviews/>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="pricing py-16">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">Frequently asked questions</h2>
+    <div class="max-w-3xl mx-auto">
+      <FAQs/>
     </div>
   </div>
 </section>

@@ -2,9 +2,9 @@
   const currentYear = new Date().getFullYear();
   
   const footerLinks = [
-    { title: 'Accueil', url: '/' },
+    { title: 'Home', url: '/' },
     { title: 'Services', url: '/services' },
-    { title: 'À propos', url: '/a-propos' },
+    { title: 'About', url: '/about' },
     { title: 'Contact', url: '/contact' }
   ];
 
@@ -20,10 +20,10 @@
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
       <div>
         <h3 class="text-xl font-bold mb-4">Pagellis Studio</h3>
-        <p class="text-gray-400">Expert Shopify | Agence web à Paris</p>
+        <p class="text-gray-400">Shopify Expert | Web Agency in Paris</p>
       </div>
       <div>
-        <h3 class="text-xl font-bold mb-4">Liens rapides</h3>
+        <h3 class="text-xl font-bold mb-4">Quick Links</h3>
         <ul>
           {#each footerLinks as link}
             <li class="mb-2">
@@ -36,11 +36,11 @@
         <h3 class="text-xl font-bold mb-4">Contact</h3>
         <p class="text-gray-400">9 rue des Colonnes</p>
         <p class="text-gray-400">75002 Paris, France</p>
-        <p class="text-gray-400">Tél: +33 6 61 90 82 51</p>
-        <p class="text-gray-400">Email: contact@pagellis-studio.com</p>
+        <p class="text-gray-400">Phone: +33 6 61 90 82 51</p>
+        <p class="text-gray-400">Email: contact [at] pagellis-studio.com</p>
       </div>
       <div>
-        <h3 class="text-xl font-bold mb-4">Suivez-nous</h3>
+        <h3 class="text-xl font-bold mb-4">Follow Us</h3>
         <div class="flex space-x-4">
           {#each socialLinks as social}
             <a href={social.url} target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
@@ -60,7 +60,7 @@
       </div>
     </div>
     <div class="mt-8 border-t border-gray-700 pt-8 text-center">
-      <p class="text-gray-400">&copy; {currentYear} Pagellis Studio. Tous droits réservés.</p>
+      <p class="text-gray-400">&copy; {currentYear} Pagellis Studio. All rights reserved.</p>
     </div>
   </div>
 </footer>
