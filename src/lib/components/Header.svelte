@@ -24,7 +24,7 @@
 
 <header class:scrolled={scrollY > 50} class="fixed w-full z-50 transition-all duration-300">
   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <a href="/" class="text-2xl font-bold text-gray-800">Pagellis Studio</a>
+    <a href="/" class="text-2xl font-bold text-green-500">Pagellis Studio</a>
     
     <nav class="hidden md:flex space-x-6">
       <a href="/" class="text-gray-600 hover:text-gray-800">Home</a>

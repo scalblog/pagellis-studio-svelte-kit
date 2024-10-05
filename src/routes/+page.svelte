@@ -2,11 +2,13 @@
   import { onMount } from 'svelte';
   import FAQs from "$lib/components/FAQs.svelte";
   import Reviews from "$lib/components/Reviews.svelte";
-
+  import heroIllustration from '$lib/images/illustration@2x.png';
+  import testimonialIllustration from '$lib/images/mobileloginrafiki@2x.png';
+  
   let clientLogos = [
-    { name: 'iGraal' },
-    { name: 'SeLoger' },
-    { name: 'Agence Fidesio' },
+    { name: 'iGraal', logo:'https://www.123richesse.com/wp-content/uploads/2020/12/quest-ce-que-igraal-710x323.jpg'},
+    { name: 'SeLoger', logo:'https://www.groupeseloger.com/images/logo-seloger-header.png' },
+    { name: 'Agence Fidesio', logo:'https://www.drupal.org/files/styles/grid-4-2x/public/LOGO-2017-ROND-ROUGE-RVB.png?itok=Fes-lvOd' },
   ];
 
   let features = [
@@ -72,7 +74,7 @@
       <button class="px-6 py-3 bg-green-500 text-white rounded-md hover:bg-green-600">Register</button>
     </div>
     <div class="md:w-1-2">
-      <img src="/images/hero-illustration.png" alt="Hero Illustration" class="w-full" />
+      <img src={heroIllustration} alt="" class="w-full" />
     </div>
   </div>
 </section>
@@ -82,7 +84,7 @@
     <h2 class="text-2xl font-bold text-center mb-8">Our Clients</h2>
     <div class="grid grid-cols-3 md:grid-cols-6 gap-8">
       {#each clientLogos as client}
-        <img src={client.logo} alt={client.name} class="h-12 object-contain mx-auto" />
+        <img src={client.logo} alt={client.name} class="h-12 object-contain mx-auto client-logo" />
       {/each}
     </div>
   </div>
@@ -105,7 +107,7 @@
 <section class="testimonial bg-gray-100 py-16">
   <div class="container mx-auto px-4 md:flex items-center">
     <div class="md:w-1/2 mb-8 md:mb-0">
-      <img src="/images/testimonial-illustration.png" alt="Testimonial Illustration" class="w-full" />
+      <img src={testimonialIllustration} alt="Testimonial Illustration" class="w-full" />
     </div>
     <div class="md:w-1/2 md:pl-12">
       <h2 class="text-3xl font-bold mb-6">The unseen of spending three years at Pixelgrade</h2>
@@ -134,3 +136,9 @@
     </div>
   </div>
 </section>
+
+<style>
+  .client-logo:nth-child(2) {
+    filter: brightness(0);
+  }
+</style>
