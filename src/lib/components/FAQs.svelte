@@ -39,4 +39,4 @@
             {/each}
         </div>
     </div>
-</section>s
+</section>

@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import { page } from '$app/stores';
+  import mainNav from './main-nav.json';
 
   let isMenuOpen = false;
   let scrollY;
@@ -27,10 +28,9 @@
     <a href="/" class="text-2xl font-bold text-green-500">Pagellis Studio</a>
     
     <nav class="hidden md:flex space-x-6">
-      <a href="/" class="text-gray-600 hover:text-gray-800">Home</a>
-      <a href="/services" class="text-gray-600 hover:text-gray-800">Services</a>
-      <a href="/a-propos" class="text-gray-600 hover:text-gray-800">About</a>
-      <a href="/contact" class="text-gray-600 hover:text-gray-800">Contact</a>
+      {#each mainNav as item}
+        <a href={item.href} class="text-gray-600 hover:text-gray-800">{item.label}</a>
+      {/each}
     </nav>
 
     <button on:click={toggleMenu} class="md:hidden">
@@ -43,10 +43,9 @@
   {#if isMenuOpen}
     <div class="md:hidden bg-white">
       <nav class="container mx-auto px-4 py-4 flex flex-col space-y-4">
-        <a href="/" class="text-gray-600 hover:text-gray-800">Home</a>
-        <a href="/services" class="text-gray-600 hover:text-gray-800">Services</a>
-        <a href="/a-propos" class="text-gray-600 hover:text-gray-800">About</a>
-        <a href="/contact" class="text-gray-600 hover:text-gray-800">Contact</a>
+        {#each mainNav as item}
+          <a href={item.href} class="text-gray-600 hover:text-gray-800">{item.label}</a>
+        {/each}
       </nav>
     </div>
   {/if}

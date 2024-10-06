@@ -1,12 +1,7 @@
 <script>
   const currentYear = new Date().getFullYear();
   
-  const footerLinks = [
-    { title: 'Home', url: '/' },
-    { title: 'Services', url: '/services' },
-    { title: 'About', url: '/about' },
-    { title: 'Contact', url: '/contact' }
-  ];
+  import mainNav from './main-nav.json';
 
   const socialLinks = [
     { name: 'LinkedIn', url: 'https://www.linkedin.com/company/pagellis-studio', icon: 'linkedin' },
@@ -20,23 +15,23 @@
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
       <div>
         <h3 class="text-xl font-bold mb-4">Pagellis Studio</h3>
-        <p class="text-gray-400">Shopify Expert | Web Agency in Paris</p>
+        <p class="text-gray-400">Web Agency in Paris</p>
       </div>
       <div>
         <h3 class="text-xl font-bold mb-4">Quick Links</h3>
         <ul>
-          {#each footerLinks as link}
+          {#each mainNav as link}
             <li class="mb-2">
-              <a href={link.url} class="text-gray-400 hover:text-white transition-colors">{link.title}</a>
+              <a href={link.href} class="text-gray-400 hover:text-white transition-colors">{link.label}</a>
             </li>
           {/each}
         </ul>
       </div>
       <div>
-        <h3 class="text-xl font-bold mb-4">Contact</h3>
+        <h3 id="contact" class="text-xl text-green-500 font-bold mb-4">Contact</h3>
         <p class="text-gray-400">9 rue des Colonnes</p>
         <p class="text-gray-400">75002 Paris, France</p>
-        <p class="text-gray-400">Phone: +33 6 61 90 82 51</p>
+        <p class="text-gray-400">Téléphone : <a href="tel:+33661908251" class="hover:text-white transition-colors">+33 6 61 90 82 51</a></p>
         <p class="text-gray-400">Email: contact [at] pagellis-studio.com</p>
       </div>
       <div>
